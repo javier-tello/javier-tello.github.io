@@ -1,5 +1,8 @@
-import React from 'react'
+"use client"
+
+import React, {useState} from 'react'
 import { ProjectCard } from './ProjectCard'
+import ProjectTag from './ProjectTag';
 
 const projectData = [
     {
@@ -59,21 +62,50 @@ const projectData = [
 ];
 
 const ProjectSection = () => {
+    const [tag, setTag] = useState("All");
+
+    const handleTagChange = (newTag: string) => {
+        setTag(newTag);
+    };
+
+    const filteredProjects = projectData.filter((project) =>
+        project.tag.includes(tag)
+    );
+
     return (
-    <>
+    <section id="projects">
     <h2 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
-        My Projects
+        My Projects - Under Construction (Fake projects listed)
     </h2>
+    <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <ProjectTag
+            name="All"
+            onClick={() => handleTagChange("All")}
+            isSelected={tag === "All"}
+        />
+        <ProjectTag
+            onClick={() => handleTagChange("Web")}
+            name="Web"
+            isSelected={tag === "Web"}
+        />
+        <ProjectTag
+            onClick={() => handleTagChange("Mobile")}
+            name="Mobile"
+            isSelected={tag === "Mobile"}
+        />
+    </div>
     <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {projectData.map((project) => (
-            <ProjectCard 
+        {filteredProjects.map((project) => (
+            <ProjectCard
                 key={project.id}
                 title={project.title}
                 description={project.description}
-                imgUrl={project.image} />
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl} />
         ))}
         </div>
-    </>
+    </section>
     )
 }
 

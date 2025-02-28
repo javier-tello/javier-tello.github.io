@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
+import Link from 'next/link';
 
 const HeroSection = () => {
     return(
@@ -13,6 +14,7 @@ const HeroSection = () => {
                         <span>
                             Hello, I&apos;m {" "}
                         </span>
+                        <br />
                         <TypeAnimation
                             sequence={[
                                 'Javier',
@@ -30,11 +32,23 @@ const HeroSection = () => {
                         />
                     </h1>
                     <p className="text-base sm:text-lg mb-6 lg:text-xl">
-                        dfkajdf;kaljfdkl;ajfal;kdfja;lkjfaldjfa
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div>
-                        <button className="px-6 py-3 rounded-full sm:w-fit mr-4 bg-[#84B082] hover:bg-[#BFD7B5]">Hire Me</button>
-                        <button className="px-6 py-3 rounded-full sm:w-fit mr-4 bg-[#84B082] hover:bg-[#BFD7B5] border border-[#3A506B]">Download Resume</button>
+                        <Link
+                            href="/#contact"
+                            className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-rose-300 to-lime-50 hover:bg-[#BFD7B5]"
+                        >
+                            Hire Me
+                        </Link>
+                        <Link
+                            href="/"
+                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-sky-500 to-pink-500 hover:bg-[#BFD7B5] mt-3"
+                        >
+                            <span className="block bg-[#92AFD7] hover:bg-[#BFD7B5] rounded-full px-5 py-2">
+                                Download CV
+                            </span>
+                        </Link>
                     </div>
                 </div>
                 <div className="col-span-5 place-self-center mt-4 lg:mt-0">
