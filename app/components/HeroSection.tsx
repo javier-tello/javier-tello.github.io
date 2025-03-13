@@ -32,7 +32,7 @@ const HeroSection = () => {
                         />
                     </h1>
                     <p className="text-base sm:text-lg mb-6 lg:text-xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Feel free to browse my personal page and reach out if you want to connect!
                     </p>
                     <div>
                         <Link
@@ -42,7 +42,7 @@ const HeroSection = () => {
                             Hire Me
                         </Link>
                         <Link
-                            href="/"
+                            href="https://drive.google.com/uc?export=download&id=19gu_w3kPJCgDyEguM6YShSXWFlAl4FFw"
                             className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-sky-500 to-pink-500 hover:bg-[#BFD7B5] mt-3"
                         >
                             <span className="block bg-[#92AFD7] hover:bg-[#BFD7B5] rounded-full px-5 py-2">
