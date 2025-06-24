@@ -1,19 +1,19 @@
 "use client"
 
 import React, {useState} from 'react'
-// import { ProjectCard } from './ProjectCard'
+import { ProjectCard } from './ProjectCard'
 import ProjectTag from './ProjectTag';
 
-// const projectData = [
-//     {
-//         id: 1,
-//         title: "React Portfolio Website",
-//         description: "Project 1 description",
-//         image: "/projects/1.png",
-//         tag: ["All", "Web"],
-//         gitUrl: "/",
-//         previewUrl: "/",
-//     },
+const projectData = [
+    {
+        id: 1,
+        title: "School Scheduler",
+        description: "A Python script that will generate a High School @ Prospect Park's teacher schedule and upload to Google Sheets based on given constraints.",
+        image: "/projects/1.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://github.com/javier-tello/international-highschool-scheduler",
+        previewUrl: "https://docs.google.com/spreadsheets/d/1puIQcatxCYgS_w1O6U2ggK6XAiudIOWZSrj1gtzTczY/edit?usp=sharing",
+    },
 //     {
 //         id: 2,
 //         title: "Potography Portfolio Website",
@@ -59,7 +59,7 @@ import ProjectTag from './ProjectTag';
 //         gitUrl: "/",
 //         previewUrl: "/",
 //     },
-// ];
+];
 
 const ProjectSection = () => {
     const [tag, setTag] = useState("All");
@@ -68,14 +68,14 @@ const ProjectSection = () => {
         setTag(newTag);
     };
 
-    // const filteredProjects = projectData.filter((project) =>
-    //     project.tag.includes(tag)
-    // );
+    const filteredProjects = projectData.filter((project) =>
+        project.tag.includes(tag)
+    );
 
     return (
     <section id="projects">
     <h2 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
-        My Projects - Coming Soon!
+        My Projects
     </h2>
     <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
@@ -94,7 +94,7 @@ const ProjectSection = () => {
             isSelected={tag === "Mobile"}
         />
     </div>
-    {/* <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+    <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project) => (
             <ProjectCard
                 key={project.id}
@@ -104,7 +104,7 @@ const ProjectSection = () => {
                 gitUrl={project.gitUrl}
                 previewUrl={project.previewUrl} />
         ))}
-        </div> */}
+        </div>
     </section>
     )
 }
